@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Grade Of Student</h2>
+    <br>
+    <form onsubmit="GradeCheck(); return false " >
+        Enter your percentage : <input type="text" id="per">
+        <button type="submit">submit </button>
+    </form>
+    <h2 id="an"></h2>
+    <script>
+        function GradeCheck(){
+            let num=document.querySelector("#per").value;
+            
+            num = Number(num);
+
+            if (num<40) {
+                document.querySelector("#an").innerHTML="Fail";
+            }
+
+            else if (num<50) {
+                document.querySelector("#an").innerHTML="D Grade";
+            }
+
+            else if (num<60) {
+                document.querySelector("#an").innerHTML="C Grade";
+            }
+
+            else if (num<70) {
+                document.querySelector("#an").innerHTML="B Grade";
+            }
+
+            else if (num<80) {
+                document.querySelector("#an").innerHTML="A Grade";
+            }
+           
+            
+            else if (num>79) {
+                document.querySelector("#an").innerHTML="A+ Grade";
+            }
+            
+            else {
+                document.querySelector("#an").innerHTML="null"
+            }
+          
+        
+        }
+     
+
+
+
+
+    </script>
+</body>
+</html>
